@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/globals.scss';
+import '@/styles/globals.scss';
 
 function MyApp(
   { Component }: { Component: any },
