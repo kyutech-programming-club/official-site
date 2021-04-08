@@ -1,8 +1,12 @@
-import { NextPage } from 'next';
-import React from 'react';
 import 'tailwindcss/tailwind.css';
+import Header from '../components/Header';
 
-const Home: NextPage = () => {
-  return <h1 className="text-gray-500, m-4">ahiahi</h1>;
+const Home = () => {
+  return (
+    <>
+      <Header />
+      <p>ahiahi page</p>
+    </>
+  );
 };
 export default Home;
