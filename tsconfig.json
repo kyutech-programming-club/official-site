@@ -2,10 +2,7 @@
   "compilerOptions": {
     "target": "ES2015",
     "module": "esnext",
-    "lib": [
-      "DOM",
-      "ES2015"
-    ],
+    "lib": ["DOM", "ES2015"],
     "jsx": "preserve",
     "strict": true,
     "moduleResolution": "node",
@@ -13,22 +10,14 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "baseUrl": ".",
+    "baseUrl": "/",
     "paths": {
-      "*": [
-        "@types/*"
-      ]
+      "*": ["@types/*"]
     },
     "allowJs": true,
     "noEmit": true,
     "isolatedModules": true
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
 }
