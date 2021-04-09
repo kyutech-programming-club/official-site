@@ -6,6 +6,33 @@ const Home = () => {
     <>
       <Header />
       <p>ahiahi page</p>
+      <p>ahiahi page</p>
+      <p>ahiahi page</p>
+      <p>ahiahi page</p>
+      <p>ahiahi page</p>
+      <p>ahiahi page</p>
+      <p>ahiahi page</p>
+      <p>ahiahi page</p>
+      <p>ahiahi page</p>
+      <p>ahiahi page</p>
+      <p>ahiahi page</p>
+      <p>ahiahi page</p>
+      <p>ahiahi page</p>
+      <p>ahiahi page</p>
+      <p>ahiahi page</p>
+      <p>ahiahi page</p>
+      <p>ahiahi page</p>
+      <p>ahiahi page</p>
+      <p>ahiahi page</p>
+      <p>ahiahi page</p>
+      <p>ahiahi page</p>
+      <p>ahiahi page</p>
+      <p>ahiahi page</p>
+      <p>ahiahi page</p>
+      <p>ahiahi page</p>
+      <p>ahiahi page</p>
+      <p>ahiahi page</p>
+      <p>ahiahi page</p>
     </>
   );
 };
