@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <>
       <div className="container mx-auto px-20">
-        <div className="rounded-full box-border w-60 p-4 border-4 object-center">
+        <div className="rounded-full box-border w-60 py-4 mx-20 border-4 ">
           <div className="text-center text-2xl">Q%A</div>
         </div>
         <div className="flex justify-around py-8">
