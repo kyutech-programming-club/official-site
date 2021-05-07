@@ -22,6 +22,40 @@ const Header = () => {
             </div>
           </div>
         </Link>
+
+        <Link href="/">
+          <div className="flex items-center flex-no-shrink mr-6 cursor-pointer">
+            <Image
+              className=""
+              src="/twitter_logo.png"
+              alt="Twitter logo"
+              width={46}
+              height={46}
+            />
+          </div>
+        </Link>
+
+        <Link href="/">
+          <div className="flex items-center flex-no-shrink mr-6 cursor-pointer">
+            <Image
+              className=""
+              src="/line_logo.png"
+              alt="LINE logo"
+              width={46}
+              height={46}
+            />
+          </div>
+        </Link>
+
+        <div className="space-x-4">
+          <Link href="/">
+            <div className="inline-block cursor-pointer">活動内容</div>
+          </Link>
+          <div className="inline-block">実績</div>
+          <div className="inline-block">アクセス</div>
+          <div className="inline-block">ブログ</div>
+          <div className="inline-block">Q&A</div>
+        </div>
       </div>
     </>
   );
