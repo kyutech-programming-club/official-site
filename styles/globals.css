@@ -1,4 +1,11 @@
 /* ./styles/globals.css */
 @tailwind base;
 @tailwind components;
+
+.btn{
+  @apply bg-blue-500;
+}
+.btn-blue:hover {
+    @apply bg-blue-700;
+}
 @tailwind utilities;

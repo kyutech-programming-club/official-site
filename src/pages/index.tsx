@@ -1,7 +1,6 @@
 import 'tailwindcss/tailwind.css';
 import Header from '../components/Header';
 import Link from 'next/link';
-
 const Home = () => {
   return (
     <>
@@ -77,6 +76,8 @@ const Home = () => {
         <div className="justify-start text-3xl pt-4" id="question8">
           Q8.どのくらいの期間でプログラミングできるようになるの？
         </div>
+        <button className="btn">My tailwind button</button>
+        <button className="btn-red">My Tailwind Button</button>
       </div>
     </>
   );
