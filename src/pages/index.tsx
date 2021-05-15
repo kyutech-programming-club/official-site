@@ -9,48 +9,15 @@ const Home = () => {
           <div className="text-center text-2xl">Q%A</div>
         </div>
         <div className="flex justify-around py-8">
-          <Link href="/#question1">
-            <div className="rounded-3xl box-border w-60 h-40 p-4 border-4 object-center text-2xl cursor-pointer">
-              Q1.どのくらいの頻度で活動すればいいの？
-            </div>
-          </Link>
-          <Link href="/#question2">
-            <div className="rounded-3xl box-border w-60 h-40 p-4 border-4 object-center text-2xl cursor-pointer">
-              Q2.お金はかかるの？
-            </div>
-          </Link>
-          <Link href="/#question3">
-            <div className="rounded-3xl box-border w-60 h-40 p-4 border-4 object-center text-2xl cursor-pointer">
-              Q3.どうやったらサークルに参加できるの？
-            </div>
-          </Link>
-          <Link href="/#question4">
-            <div className="rounded-3xl box-border w-60 h-40 p-4 border-4 object-center text-2xl cursor-pointer">
-              Q4.どんな活動をしているの？
-            </div>
-          </Link>
-        </div>
-        <div className="flex justify-around">
-          <Link href="/#question5">
-            <div className="rounded-3xl box-border w-60 h-40 p-4 border-4 object-center text-2xl cursor-pointer">
-              Q5.全くプログラミングについて知らないけど大丈夫？
-            </div>
-          </Link>
-          <Link href="/#question6">
-            <div className="rounded-3xl box-border w-60 h-40 p-4 border-4 object-center text-2xl cursor-pointer">
-              Q6.兼部、兼サークルはできるの？
-            </div>
-          </Link>
-          <Link href="/#question7">
-            <div className="rounded-3xl box-border w-60 h-40 p-4 border-4 object-center text-2xl cursor-pointer">
-              Q7.将来役に立つ？
-            </div>
-          </Link>
-          <Link href="/#question8">
-            <div className="rounded-3xl box-border w-60 h-40 p-4 border-4 object-center text-2xl cursor-pointer">
-              Q8.どのくらいの期間でプログラミングできるようになるの？
-            </div>
-          </Link>
+          <div className="Questions">
+            {items.map((item: Item) => (
+              <Link href={item.id}>
+                <div className="rounded-3xl box-border w-60 h-40 p-4 border-4 object-center text-2xl cursor-pointer">
+                  {item.title}
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
         <div className="justify-start text-3xl pt-4" id="question1">
           Q1.どのくらいの頻度で活動すればいいの？
@@ -83,3 +50,43 @@ const Home = () => {
   );
 };
 export default Home;
+
+type Item = {
+  id: string;
+  title: string;
+};
+
+const items: Item[] = [
+  {
+    id: '/#question1',
+    title: 'Q1.どのくらいの頻度で活動すればいいの？',
+  },
+  {
+    id: '/#question2',
+    title: 'Q2.お金はかかるの？',
+  },
+  {
+    id: '/#question3',
+    title: 'Q3.どうやったらサークルに参加できるの？',
+  },
+  {
+    id: '/#question4',
+    title: 'Q4.どんな活動をしているの？',
+  },
+  {
+    id: '/#question5',
+    title: 'Q5.全くプログラミングについて知らないけど大丈夫？',
+  },
+  {
+    id: '/#question6',
+    title: 'Q6.兼部、兼サークルはできるの？',
+  },
+  {
+    id: '/#question7',
+    title: 'Q7.将来役に立つ？',
+  },
+  {
+    id: '/#question8',
+    title: 'Q8.どのくらいの期間でプログラミングできるようになるの？',
+  },
+];
