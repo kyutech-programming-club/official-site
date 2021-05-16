@@ -21,6 +21,25 @@ const Home = () => {
         </div>
         <div className="justify-start text-3xl pt-4" id="question1">
           Q1.どのくらいの頻度で活動すればいいの？
+          {questions1.map((item: Question1) => (
+            <Link href={item.id}>
+              <div className="questionBox">{item.title}</div>
+            </Link>
+          ))}
+        </div>
+        <div className="flex justify-around py-8">
+          {questions2.map((item: Question2) => (
+            <Link href={item.id}>
+              <div className="questionBox">{item.title}</div>
+            </Link>
+          ))}
+        </div>
+        <div className="container mx-auto py-6">{items1}</div>
+        <div className="container mx-auto py-6">
+          <div className="justify-start text-3xl pt-4" id="question1">
+            Q1.どのくらいの頻度で活動すればいいの？
+          </div>
+          <div className="justify-start text-3xl pt-4">A.適当です</div>
         </div>
         <div className="justify-start text-3xl pt-4" id="question2">
           Q2.お金はかかるの？
@@ -55,8 +74,12 @@ type Item = {
   id: string;
   title: string;
 };
+type Question1 = {
+  id: string;
+  title: string;
+};
 
-const items: Item[] = [
+const questions1: Question1[] = [
   {
     id: '/#question1',
     title: 'Q1.どのくらいの頻度で活動すればいいの？',
@@ -73,6 +96,14 @@ const items: Item[] = [
     id: '/#question4',
     title: 'Q4.どんな活動をしているの？',
   },
+];
+
+type Question2 = {
+  id: string;
+  title: string;
+};
+
+const questions2: Question2[] = [
   {
     id: '/#question5',
     title: 'Q5.全くプログラミングについて知らないけど大丈夫？',
@@ -88,5 +119,59 @@ const items: Item[] = [
   {
     id: '/#question8',
     title: 'Q8.どのくらいの期間でプログラミングできるようになるの？',
+  },
+];
+
+type Answers = {
+  id: string;
+  question: string;
+  answer: string;
+};
+
+const answers: Answers[] = [
+  {
+    id: 'question1',
+    question: 'Q5.全くプログラミングについて知らないけど大丈夫？',
+    answer: 'A.大丈夫です',
+  },
+  {
+    id: 'question1',
+    question: 'Q5.全くプログラミングについて知らないけど大丈夫？',
+    answer: 'A.大丈夫です',
+  },
+  {
+    id: 'question1',
+    question: 'Q5.全くプログラミングについて知らないけど大丈夫？',
+    answer: 'A.大丈夫です',
+  },
+  {
+    id: 'question1',
+    question: 'Q5.全くプログラミングについて知らないけど大丈夫？',
+    answer: 'A.大丈夫です',
+  },
+  {
+    id: 'question1',
+    question: 'Q5.全くプログラミングについて知らないけど大丈夫？',
+    answer: 'A.大丈夫です',
+  },
+  {
+    id: 'question1',
+    question: 'Q5.全くプログラミングについて知らないけど大丈夫？',
+    answer: 'A.大丈夫です',
+  },
+  {
+    id: 'question1',
+    question: 'Q5.全くプログラミングについて知らないけど大丈夫？',
+    answer: 'A.大丈夫です',
+  },
+  {
+    id: 'question1',
+    question: 'Q5.全くプログラミングについて知らないけど大丈夫？',
+    answer: 'A.大丈夫です',
+  },
+  {
+    id: 'question1',
+    question: 'Q5.全くプログラミングについて知らないけど大丈夫？',
+    answer: 'A.大丈夫です',
   },
 ];
