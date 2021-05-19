@@ -16,9 +16,14 @@ const Header = () => {
   return (
     <>
       {/* Gradient area */}
-      <div className="sticky top-0 bg-gradient-to-r from-green-400 to-blue-500 h-1"></div>
+      <div className="top-0 h-8 bg-gradient-to-r from-green-400 to-blue-500">
+        <div className="sticky text-xl font-semibold text-white text-center">
+          Welcome to Proken HopePage!
+        </div>
+      </div>
       {/* Header */}
-      <div className="sticky top-0 flex items-center justify-between bg-white p-4 border-b-2 border-gray-400 border-opacity-25">
+      <div className="sticky top-0 flex items-center justify-between bg-white p-2 border-b-2 border-gray-400 border-opacity-25">
+        {/* Logo and name */}
         <div className="mr-6 cursor-pointer">
           <Link href="/">
             <div className="flex items-center">
@@ -26,15 +31,17 @@ const Header = () => {
                 className=""
                 src="/proken_logo.png"
                 alt="Proken logo"
-                width={46}
-                height={46}
+                width={64}
+                height={64}
               />
-              <div className="font-extrabold text-xl text-gray-600">
+              <div className="px-2 font-extrabold text-2xl text-gray-600">
                 Proken 216
               </div>
             </div>
           </Link>
         </div>
+
+        {/* Header menu */}
         <div className="flex items-center justify-between">
           {headerMenu.map((headerMenu) => (
             <Link href={headerMenu.url}>
