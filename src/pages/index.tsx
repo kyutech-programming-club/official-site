@@ -34,6 +34,7 @@ const Home = () => {
             </Link>
           ))}
         </div>
+<<<<<<< HEAD
         <div className="container mx-auto py-6">{items1}</div>
         <div className="container mx-auto py-6">
           <div className="justify-start text-3xl pt-4" id="question1">
@@ -62,6 +63,18 @@ const Home = () => {
         <div className="justify-start text-3xl pt-4" id="question8">
           Q8.どのくらいの期間でプログラミングできるようになるの？
         </div>
+=======
+            <div className="container mx-auto py-6">
+              { answers.map((item :Answers) => (
+                <div className="container mx-auto py-6">
+                  <div className="container mx-auto py-6">
+                    <div className="questionSentence" id={item.id}>{item.question}</div>
+                    <div className="answerSentence">{item.answer}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+>>>>>>> 51e7e4e (add answer sentences)
         <button className="btn">My tailwind button</button>
         <button className="btn-red">My Tailwind Button</button>
       </div>
