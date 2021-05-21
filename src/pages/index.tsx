@@ -126,8 +126,13 @@ const questions2: Question2[] = [
     title: 'Q6.兼部、兼サークルはできるの？',
   },
   {
+<<<<<<< HEAD
     id: '/#question7',
     title: 'Q7.将来役に立つ？',
+=======
+    id:"/#question7",
+    title:'Q7.九工大生以外でも入れるの？'
+>>>>>>> 1ffe6f6 (change answer sentences)
   },
   {
     id: '/#question8',
@@ -143,6 +148,7 @@ type Answers = {
 
 const answers: Answers[] = [
   {
+<<<<<<< HEAD
     id: 'question1',
     question: 'Q5.全くプログラミングについて知らないけど大丈夫？',
     answer: 'A.大丈夫です',
@@ -186,5 +192,45 @@ const answers: Answers[] = [
     id: 'question1',
     question: 'Q5.全くプログラミングについて知らないけど大丈夫？',
     answer: 'A.大丈夫です',
+=======
+    id:"question1",
+    question:'Q1.どのくらいの頻度で活動すればいいの？',
+    answer:"A.大丈夫です"
+  },
+  {
+    id:"question2",
+    question:'Q2.お金はかかるの？',
+    answer:"A.大丈夫です"
+  },
+  {
+    id:"question3",
+    question:'Q3.どうやったらサークルに参加できるの？',
+    answer:"A.大丈夫です"
+  },
+  {
+    id:"question4",
+    question:'Q4.どんな活動をしているの？',
+    answer:"A.大丈夫です"
+  },
+  {
+    id:"question5",
+    question:'Q5.全くプログラミングについて知らないけど大丈夫？',
+    answer:"A.大丈夫です"
+  },
+  {
+    id:"question6",
+    question:'Q6.兼部、兼サークルはできるの？',
+    answer:"A.大丈夫です"
+  },
+  {
+    id:"question7",
+    question:'Q7.九工大生以外でも入れるの',
+    answer:"A.大丈夫です"
+  },
+  {
+    id:"question8",
+    question:'Q8.どのくらいの期間でプログラミングできるようになるの？',
+    answer:"A.大丈夫です"
+>>>>>>> 1ffe6f6 (change answer sentences)
   },
 ];
