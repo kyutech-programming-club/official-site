@@ -1,6 +1,9 @@
 import 'tailwindcss/tailwind.css';
-import Header from '../components/Header';
 import Link from 'next/link';
+import { questions } from '../datas/questionItems';
+import { QuestionType } from '../types/questionsType';
+import { answers } from '../datas/answeritems';
+import { AnswerType } from '../types/answerType';
 const Home = () => {
   return (
     <>
@@ -8,6 +11,7 @@ const Home = () => {
         <div className="rounded-full box-border w-60 py-4 mx-20 border-4 ">
           <div className="text-center text-2xl">Q%A</div>
         </div>
+<<<<<<< HEAD
         <div className="flex justify-around py-8">
           <div className="Questions">
             {items.map((item: Item) => (
@@ -22,10 +26,15 @@ const Home = () => {
         <div className="justify-start text-3xl pt-4" id="question1">
           Q1.どのくらいの頻度で活動すればいいの？
           {questions1.map((item: Question1) => (
+=======
+        <div className="py-8">
+          {questions.map((item: QuestionType) => (
+>>>>>>> 2565bdd (apply to other file)
             <Link href={item.id}>
               <div className="questionBox">{item.title}</div>
             </Link>
           ))}
+<<<<<<< HEAD
         </div>
         <div className="flex justify-around py-8">
           {questions2.map((item: Question2) => (
@@ -64,24 +73,31 @@ const Home = () => {
           Q8.どのくらいの期間でプログラミングできるようになるの？
         </div>
 =======
+=======
+        </div>
+        <div className="container mx-auto py-6">
+          {answers.map((item: AnswerType) => (
+>>>>>>> 2565bdd (apply to other file)
             <div className="container mx-auto py-6">
-              { answers.map((item :Answers) => (
-                <div className="container mx-auto py-6">
-                  <div className="container mx-auto py-6">
-                    <div className="questionSentence" id={item.id}>{item.question}</div>
-                    <div className="answerSentence">{item.answer}</div>
-                  </div>
-                </div>
-              ))}
+              <div className="questionSentence" id={item.id}>
+                {item.question}
+              </div>
+              <div className="answerSentence">{item.answer}</div>
             </div>
+<<<<<<< HEAD
 >>>>>>> 51e7e4e (add answer sentences)
         <button className="btn">My tailwind button</button>
         <button className="btn-red">My Tailwind Button</button>
+=======
+          ))}
+        </div>
+>>>>>>> 2565bdd (apply to other file)
       </div>
     </>
   );
 };
 export default Home;
+<<<<<<< HEAD
 
 type Item = {
   id: string;
@@ -234,3 +250,5 @@ const answers: Answers[] = [
 >>>>>>> 1ffe6f6 (change answer sentences)
   },
 ];
+=======
+>>>>>>> 2565bdd (apply to other file)
