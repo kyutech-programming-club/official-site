@@ -1,29 +1,26 @@
 /* ./styles/globals.css */
 @tailwind base;
 @tailwind components;
-.btn {
-  @apply w-60;
-  @apply bg-blue-500;
-  @apply h-40;
-}
-.btn-blue:hover {
-  @apply bg-blue-700;
-}
 .questionBox {
   @apply rounded-3xl;
   @apply box-border;
-  @apply w-10;
-  @apply h-10;
+  @apply w-full;
+  @apply h-20;
   @apply p-4;
   @apply border-4;
   @apply object-center;
-  @apply text-2xl;
+  @apply text-3xl;
   @apply cursor-pointer;
+  @apply border-blue;
+  @apply border-opacity-75;
 }
 .questionSentence {
   @apply justify-start;
   @apply text-3xl;
   @apply pt-4;
+  @apply border-b-4;
+  @apply border-blue;
+  @apply pl-4;
 }
 .answerSentence {
   @apply justify-start text-3xl pt-4;
