@@ -2,7 +2,7 @@ import { AnswerType } from '../types/answerType';
 export const answers: AnswerType[] = [
   {
     id: 'question1',
-    question: 'Q1.どのくらいの頻度で活動すればいいの？',
+    question: 'Q1.どのくらいの頻度で活動するの？',
     answer:
       'A.基本的に自由です！\nこのサークルでは基本的に独学で自分がやりたい内容を家でやったり、工房に来てみんなとやったりします。\n定期的に行われるイベントにも参加できます',
   },

@@ -2,7 +2,7 @@ import { QuestionType } from '../types/questionsType';
 export const questions: QuestionType[] = [
   {
     id: '/#question1',
-    title: 'Q1.どのくらいの頻度で活動すればいいの？',
+    title: 'Q1.どのくらいの頻度で活動するの？',
   },
   {
     id: '/#question2',
