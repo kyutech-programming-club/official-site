@@ -7,10 +7,11 @@ import { AnswerType } from '../types/answerType';
 const Home = () => {
   return (
     <>
-      <div className="container mx-auto px-20">
-        <div className="rounded-full box-border w-60 py-4 mx-20 border-4 ">
+      <div className="container mx-auto px-28">
+        <div className="rounded-full box-border w-60 py-4 mx-20 border-4 border-blue border-opacity-75">
           <div className="text-center text-2xl">Q%A</div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
         <div className="flex justify-around py-8">
           <div className="Questions">
@@ -28,6 +29,9 @@ const Home = () => {
           {questions1.map((item: Question1) => (
 =======
         <div className="py-8">
+=======
+        <div className="py-8 space-y-4">
+>>>>>>> c89a260 (fix padding and make space)
           {questions.map((item: QuestionType) => (
 >>>>>>> 2565bdd (apply to other file)
             <Link href={item.id}>
