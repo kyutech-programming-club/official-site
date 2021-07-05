@@ -2,3 +2,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.title {
+  @apply text-center;
+  @apply text-3xl;
+  @apply my-5;
+  @apply border-b-8;
+}
+
+.message {
+  @apply text-center;
+  @apply text-2xl;
+  @apply mx-2;
+}
