@@ -1,17 +1,14 @@
+import React from 'react';
+
 import Image from 'next/image';
 import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { ReactNode } from 'react';
 
-const Header = () => {
-  const headerMenu = [
-    {
-      name: 'Twitter',
-      url: 'https://twitter.com/kyutech_proken?lang=ja',
-    },
-    {
-      name: 'Blog',
-      url: 'https://twitter.com/kyutech_proken?lang=ja',
-    },
-  ];
+import { HeaderItems } from '../data/HeaderItems';
+import { ItemType } from '../types/headerItemType';
+import { socialLinks } from '../data/SocialLinks';
+import { socialLinksType } from '../types/socialLinksType';
 
   return (
     <>
