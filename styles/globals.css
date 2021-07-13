@@ -3,6 +3,19 @@
 @tailwind components;
 @tailwind utilities;
 
+.actitle {
+  @apply flex;
+  @apply flex-auto;
+  @apply text-center;
+  @apply text-3xl;
+}
+
+.picture {
+  @apply flex;
+  @apply flex-auto;
+  @apply text-center;
+}
+
 .title {
   @apply text-center;
   @apply text-3xl;

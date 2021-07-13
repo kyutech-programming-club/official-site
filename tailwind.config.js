@@ -19,15 +19,23 @@ module.exports = {
   plugins: [
     plugin(function ({ addComponents }) {
       const rounded = {
+        '.position': {
+          padding: '.5rem 6rem 5rem 7rem',
+          margin: '.7rem',
+          color: '#343A40',
+          background: 'blue',
+          flex: '1',
+        },
+
         '.container-r': {
           padding: '.5rem 6rem 5rem 7rem',
-          margin: '.8rem 0 8rem 50rem',
+          margin: '.8rem 0 8rem 40rem',
           color: '#343A40',
         },
 
         '.container-l': {
           padding: '.5rem 7rem 5rem 6rem',
-          margin: '.8rem 50rem 8rem 0',
+          margin: '.8rem 40rem 8rem 0',
           color: '#343A40',
         },
       };
