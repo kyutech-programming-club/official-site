@@ -1,62 +1,65 @@
+import React from 'react';
+
 import Image from 'next/image';
 import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { ReactNode } from 'react';
 
-const Header = () => {
-  const headerMenu = [
-    {
-      name: 'Twitter',
-      url: 'https://twitter.com/kyutech_proken?lang=ja',
-    },
-    {
-      name: 'Blog',
-      url: 'https://twitter.com/kyutech_proken?lang=ja',
-    },
-  ];
+import { HeaderItems } from '../data/HeaderItems';
+import { ItemType } from '../types/headerItemType';
+import { socialLinks } from '../data/SocialLinks';
+import { socialLinksType } from '../types/socialLinksType';
 
+interface Props {
+  children: ReactNode;
+}
+
+const Header: React.FC<Props> = ({ children }: Props) => {
   return (
-    <>
-      {/* Gradient area */}
-      <div className="top-0 h-8 bg-gradient-to-r from-green-400 to-blue-500">
-        <div className="sticky text-xl font-semibold text-white text-center">
-          Welcome to Proken HopePage!
-        </div>
-      </div>
-      {/* Header */}
-      <div className="sticky top-0 flex items-center justify-between bg-white p-2 border-b-2 border-gray-400 border-opacity-25">
-        {/* Logo and name */}
-        <div className="mr-6 cursor-pointer">
-          <Link href="/">
-            <div className="flex items-center">
+    <div>
+      <div>
+        <div className="sticky top-0 h-16 flex justify-between items-center bg-white pt-10 md:p-10">
+          <div className="flex items-center font-bold text-2xl cursor-pointer">
+            <Link href="/">
               <Image
-                className=""
                 src="/proken_logo.png"
-                alt="Proken logo"
-                width={64}
-                height={64}
+                alt="proken logo"
+                width={60}
+                height={60}
               />
-              <div className="px-2 font-extrabold text-2xl text-gray-600">
-                Proken 216
-              </div>
-            </div>
-          </Link>
-        </div>
-
-        {/* Header menu */}
-        <div className="flex items-center justify-between">
-          {headerMenu.map((headerMenu) => (
-            <Link href={headerMenu.url}>
-              <div className="px-2 md:px-4">
-                <div
-                  className="font-bold text-xl text-gray-600"
-                  key={headerMenu.name}>
-                  {headerMenu.name}
-                </div>
-              </div>
             </Link>
-          ))}
+            <Link href="/">
+              <div className="text-gray">プロ研216</div>
+            </Link>
+          </div>
+          <div className="flex justify-around items-center p-4 w-48">
+            {socialLinks.map((socialLink: socialLinksType) => (
+              <div className="flex">
+                <a
+                  href={socialLink.url}
+                  /*外部リンクを別タブで開く*/ target="_blank"
+                  /*target="_blank"の脆弱性回避*/ rel="noopener">
+                  <FontAwesomeIcon
+                    icon={socialLink.iconClass}
+                    size="2x"
+                    color={socialLink.color}
+                  />
+                </a>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-    </>
+      <div>
+        <div className="sticky top-0 h-16 flex justify-around items-center border-b-2 bg-white border-gray-200 px-4">
+          {HeaderItems.map((HeaderItem: ItemType) => (
+            <h1>{HeaderItem.title}</h1>
+          ))}
+          <div className="border-white"></div>
+        </div>
+        <div>{children}</div>
+      </div>
+    </div>
   );
 };
 export default Header;
