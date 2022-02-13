@@ -1,7 +1,6 @@
 import Container from "../components/container";
 import MoreStories from "../components/more-stories";
 import HeroPost from "../components/hero-post";
-import Intro from "../components/intro";
 import Layout from "../components/layout";
 import { getAllPosts } from "../lib/api";
 import Head from "next/head";
@@ -24,7 +23,10 @@ const Index = ({ allPosts }: Props) => {
         <Head>
           <title>Next.js Blog Example with {CMS_NAME}</title>
         </Head>
+
         <Hero />
+
+        {/* About sction */}
         <Section
           index="About"
           borderColor="cyan"
@@ -32,22 +34,27 @@ const Index = ({ allPosts }: Props) => {
         >
           <CustomImage imageUrl="/assets/hero/hero.jpg" alt="hero_image" />
         </Section>
+
+        {/* Activity section */}
         <Section
           index="Activity"
           borderColor="pink"
           content={CONTENT_IN_ABOUT_SECTION}
         ></Section>
-        <Container>
-          <Intro />
-          {heroPost && (
-            <HeroPost
-              title={heroPost.title}
-              date={heroPost.date}
-              slug={heroPost.slug}
-            />
-          )}
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-        </Container>
+
+        {/* Blog section */}
+        <Section index="Blog" borderColor="teal">
+          <Container>
+            {heroPost && (
+              <HeroPost
+                title={heroPost.title}
+                date={heroPost.date}
+                slug={heroPost.slug}
+              />
+            )}
+            {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+          </Container>
+        </Section>
       </Layout>
     </>
   );
