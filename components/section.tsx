@@ -8,14 +8,10 @@ type Props = {
 };
 
 const Section = ({ index, borderColor, content, children }: Props) => {
-  const pinkBorderStyle =
-    "text-2xl font-bold text-gray-700 md:text-4xl border-b-4 border-pink-400 inline-block";
-  const cyanBorderStyle =
-    "text-2xl font-bold text-gray-700 md:text-4xl border-b-4 border-cyan-400 inline-block";
-  const tealBorderStyle =
-    "text-2xl font-bold text-gray-700 md:text-4xl border-b-4 border-teal-400 inline-block";
-  const nothingBorderStyle =
-    "text-2xl font-bold text-gray-700 md:text-4xl border-b-4 border-gray-400 inline-block";
+  const pinkBorderStyle = "w-16 h-1 rounded-full bg-pink-400 inline-flex";
+  const cyanBorderStyle = "w-16 h-1 rounded-full bg-cyan-400 inline-flex";
+  const tealBorderStyle = "w-16 h-1 rounded-full bg-teal-400 inline-flex";
+  const nothingBorderStyle = "w-16 h-1 rounded-full bg-gray-400 inline-flex";
 
   const attachStyle = (color: string) => {
     if (color === "pink") {
@@ -32,7 +28,12 @@ const Section = ({ index, borderColor, content, children }: Props) => {
   return (
     <div className="container px-6 py-16 mx-auto text-center">
       <div className="max-w-3xl mx-auto">
-        <div className={attachStyle(borderColor)}>{index}</div>
+        <div className="text-2xl font-bold text-gray-700 md:text-4xl inline-block">
+          {index}
+        </div>
+        <div className="flex my-6 justify-center">
+          <div className={attachStyle(borderColor)}></div>
+        </div>
         <p className="mt-6 text-gray-500 text-base text-justify">{content}</p>
       </div>
       <div>{children}</div>
