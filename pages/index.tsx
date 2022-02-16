@@ -32,7 +32,9 @@ const Index = ({ allPosts }: Props) => {
           borderColor="cyan"
           content={CONTENT_IN_ABOUT_SECTION}
         >
-          <CustomImage imageUrl="/assets/hero/hero.jpg" alt="hero_image" />
+          <Container>
+            <CustomImage imageUrl="/assets/hero/hero.jpg" alt="hero_image" />
+          </Container>
         </Section>
 
         {/* Activity section */}

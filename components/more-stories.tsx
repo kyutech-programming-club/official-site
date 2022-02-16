@@ -8,7 +8,7 @@ type Props = {
 const MoreStories = ({ posts }: Props) => {
   return (
     <section>
-      <div className="grid md:grid-cols-3 md:gap-x-16 lg:gap-x-32 gap-y-20 md:gap-y-32 mb-32 place-content-center">
+      <div className="grid md:grid-cols-3 md:gap-x-12 lg:gap-x-20 gap-y-20 md:gap-y-32 mb-32 place-content-center mt-10">
         {posts.map((post) => (
           <PostPreview
             key={post.slug}
