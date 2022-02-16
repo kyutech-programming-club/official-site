@@ -13,7 +13,6 @@ const Layout = ({ children }: Props) => {
       <div className="min-h-screen font-lato bg-[#F7FCFD]">
         <main>{children}</main>
       </div>
-      <Footer />
     </>
   );
 };
