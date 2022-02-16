@@ -15,8 +15,7 @@ type Props = {
 };
 
 const Index = ({ allPosts }: Props) => {
-  const heroPost = allPosts[0];
-  const morePosts = allPosts.slice(1);
+  const topPosts = allPosts.slice(0, 3);
   return (
     <>
       <Layout>
@@ -45,14 +44,7 @@ const Index = ({ allPosts }: Props) => {
         {/* Blog section */}
         <Section index="Blog" borderColor="teal">
           <Container>
-            {heroPost && (
-              <HeroPost
-                title={heroPost.title}
-                date={heroPost.date}
-                slug={heroPost.slug}
-              />
-            )}
-            {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+            {topPosts.length > 0 && <MoreStories posts={topPosts} />}
           </Container>
         </Section>
       </Layout>
@@ -63,7 +55,7 @@ const Index = ({ allPosts }: Props) => {
 export default Index;
 
 export const getStaticProps = async () => {
-  const allPosts = getAllPosts(["title", "date", "slug"]);
+  const allPosts = getAllPosts(["title", "date", "slug", "coverImage"]);
 
   return {
     props: { allPosts },
