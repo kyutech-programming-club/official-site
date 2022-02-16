@@ -14,7 +14,6 @@ import PostType from "../../types/post";
 
 type Props = {
   post: PostType;
-  morePosts: PostType[];
   preview?: boolean;
 };
 
@@ -37,7 +36,11 @@ const Post = ({ post, preview }: Props) => {
                   {post.title} | Next.js Blog Example with {CMS_NAME}
                 </title>
               </Head>
-              <PostHeader title={post.title} date={post.date} />
+              <PostHeader
+                title={post.title}
+                date={post.date}
+                coverImage={post.coverImage}
+              />
               <PostBody content={post.content} />
             </article>
           </>
