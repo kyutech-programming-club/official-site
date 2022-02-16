@@ -1,7 +1,7 @@
 const Hero = () => {
   return (
     <div
-      className="w-full bg-center bg-cover h-[32rem]"
+      className="w-full bg-center bg-cover h-[18rem]"
       style={{
         backgroundImage: "url(/assets/hero/hero2.jpg)",
       }}
