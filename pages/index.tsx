@@ -4,7 +4,7 @@ import HeroPost from "../components/hero-post";
 import Layout from "../components/layout";
 import { getAllPosts } from "../lib/api";
 import Head from "next/head";
-import { CMS_NAME, CONTENT_IN_ABOUT_SECTION } from "../lib/constants";
+import { CONTENT_IN_ABOUT_SECTION } from "../lib/constants";
 import Post from "../types/post";
 import Hero from "../components/hero";
 import Section from "../components/section";
@@ -21,7 +21,7 @@ const Index = ({ allPosts }: Props) => {
     <>
       <Layout>
         <Head>
-          <title>Next.js Blog Example with {CMS_NAME}</title>
+          <title>proken 216 website</title>
         </Head>
 
         <Hero imageUrl="/assets/hero/hero.jpg" />
