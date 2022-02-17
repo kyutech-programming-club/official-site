@@ -1,13 +1,13 @@
 import Container from "../components/container";
 import MoreStories from "../components/more-stories";
 import Layout from "../components/layout";
+import Hero from "../components/hero";
+import Section from "../components/section";
+import About from "../components/about";
 import { getAllPosts } from "../lib/api";
 import Head from "next/head";
 import { CONTENT_IN_ABOUT_SECTION } from "../lib/constants";
 import Post from "../types/post";
-import Hero from "../components/hero";
-import Section from "../components/section";
-import CustomImage from "../components/custom-image";
 
 type Props = {
   allPosts: Post[];
@@ -25,13 +25,12 @@ const Index = ({ allPosts }: Props) => {
         <Hero imageUrl="/hero/hero.jpg" />
 
         {/* About sction */}
-        <Section
-          index="About"
-          borderColor="cyan"
-          content={CONTENT_IN_ABOUT_SECTION}
-        >
+        <Section index="About" borderColor="cyan">
           <Container>
-            <CustomImage imageUrl="/hero/hero.jpg" alt="hero_image" />
+            <About
+              content={CONTENT_IN_ABOUT_SECTION}
+              imageUrl="/hero/hero.jpg"
+            />
           </Container>
         </Section>
 
