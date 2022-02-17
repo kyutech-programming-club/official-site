@@ -24,7 +24,7 @@ const Index = ({ allPosts }: Props) => {
           <title>proken 216 website</title>
         </Head>
 
-        <Hero imageUrl="/assets/hero/hero.jpg" />
+        <Hero imageUrl="/hero/hero.jpg" />
 
         {/* About sction */}
         <Section
@@ -33,7 +33,7 @@ const Index = ({ allPosts }: Props) => {
           content={CONTENT_IN_ABOUT_SECTION}
         >
           <Container>
-            <CustomImage imageUrl="/assets/hero/hero.jpg" alt="hero_image" />
+            <CustomImage imageUrl="/hero/hero.jpg" alt="hero_image" />
           </Container>
         </Section>
 
