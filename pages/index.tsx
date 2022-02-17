@@ -1,6 +1,5 @@
 import Container from "../components/container";
 import MoreStories from "../components/more-stories";
-import HeroPost from "../components/hero-post";
 import Layout from "../components/layout";
 import { getAllPosts } from "../lib/api";
 import Head from "next/head";
@@ -9,7 +8,6 @@ import Post from "../types/post";
 import Hero from "../components/hero";
 import Section from "../components/section";
 import CustomImage from "../components/custom-image";
-import Activity from "../components/activity";
 
 type Props = {
   allPosts: Post[];
@@ -36,13 +34,6 @@ const Index = ({ allPosts }: Props) => {
             <CustomImage imageUrl="/hero/hero.jpg" alt="hero_image" />
           </Container>
         </Section>
-
-        {/* Activity section */}
-        {/* <Section index="Activity" borderColor="pink">
-          <Container>
-            <Activity />
-          </Container>
-        </Section> */}
 
         {/* Blog section */}
         <Section index="Blog" borderColor="teal">

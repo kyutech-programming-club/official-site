@@ -3,11 +3,9 @@ import MoreStories from "../components/more-stories";
 import Layout from "../components/layout";
 import { getAllPosts } from "../lib/api";
 import Head from "next/head";
-import { CMS_NAME, CONTENT_IN_ABOUT_SECTION } from "../lib/constants";
 import Post from "../types/post";
 import Hero from "../components/hero";
 import Section from "../components/section";
-import CustomImage from "../components/custom-image";
 
 type Props = {
   allPosts: Post[];
@@ -24,7 +22,7 @@ const Index = ({ allPosts }: Props) => {
 
         <Hero imageUrl="/assets/hero/hero2.jpg" />
 
-        {/* Blog section */}
+        {/* All blog section */}
         <Section index="Blog" borderColor="teal">
           <Container>
             {topPosts.length > 0 && <MoreStories posts={topPosts} />}
