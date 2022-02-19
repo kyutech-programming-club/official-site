@@ -8,6 +8,7 @@ import { getAllPosts } from "../lib/api";
 import Head from "next/head";
 import { CONTENT_IN_ABOUT_SECTION } from "../lib/constants";
 import Post from "../types/post";
+import Button from "../components/button";
 
 type Props = {
   allPosts: Post[];
@@ -36,6 +37,11 @@ const Index = ({ allPosts }: Props) => {
         <Section index="Blog" borderColor="teal">
           <Container>
             {topPosts.length > 0 && <MoreStories posts={topPosts} />}
+            <Button
+              href="/blog"
+              message="もっとブログを見る"
+              borderColor="teal"
+            />
           </Container>
         </Section>
       </Layout>
