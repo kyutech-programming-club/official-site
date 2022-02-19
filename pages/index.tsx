@@ -15,6 +15,7 @@ type Props = {
 
 const Index = ({ allPosts }: Props) => {
   const topPosts = allPosts.slice(0, 3);
+
   return (
     <>
       <Layout>
@@ -27,10 +28,7 @@ const Index = ({ allPosts }: Props) => {
         {/* About sction */}
         <Section index="About" borderColor="cyan">
           <Container>
-            <About
-              content={CONTENT_IN_ABOUT_SECTION}
-              imageUrl="/hero/hero.jpg"
-            />
+            <About content={CONTENT_IN_ABOUT_SECTION} />
           </Container>
         </Section>
 
