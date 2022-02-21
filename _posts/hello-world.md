@@ -1,6 +1,6 @@
 ---
 title: "Learn How to Pre-render Pages Using Static Generation with Next.js"
-date: "2020-03-16T05:35:07.322Z"
+date: "2020/03/16"
 coverImage: "/blog/hello-world/cover.jpg"
 ---
 

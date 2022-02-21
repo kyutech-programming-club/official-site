@@ -1,4 +1,3 @@
-import DateFormatter from "./date-formatter";
 import Link from "next/link";
 
 type Props = {
@@ -18,7 +17,7 @@ const PostCard = ({ title, date, slug, coverImage }: Props) => {
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">
               {title}
             </h5>
-            <DateFormatter dateString={date} />
+            {date}
           </div>
         </div>
       </Link>

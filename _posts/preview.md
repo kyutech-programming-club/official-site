@@ -1,6 +1,6 @@
 ---
 title: "Preview Mode for Static Generation"
-date: "2020-03-16T05:35:07.322Z"
+date: "2020/03/16"
 coverImage: "/blog/preview/cover.jpg"
 ---
 
