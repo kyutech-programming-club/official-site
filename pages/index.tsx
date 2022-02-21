@@ -4,6 +4,8 @@ import Layout from "../components/layout";
 import Hero from "../components/hero";
 import Section from "../components/section";
 import About from "../components/about";
+import Button from "../components/button";
+import Recruitment from "../components/recruitment";
 import { getAllPosts } from "../lib/api";
 import Head from "next/head";
 import { CONTENT_IN_ABOUT_SECTION } from "../lib/constants";
@@ -42,6 +44,13 @@ const Index = ({ allPosts }: Props) => {
               message="もっとブログを見る"
               borderColor="teal"
             />
+          </Container>
+        </Section>
+
+        {/* Recruitment section */}
+        <Section index="Recruitment" borderColor="pink">
+          <Container>
+            <Recruitment />
           </Container>
         </Section>
       </Layout>
