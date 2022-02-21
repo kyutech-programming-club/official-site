@@ -12,7 +12,11 @@ const PostCard = ({ title, date, slug, coverImage }: Props) => {
     <div className="max-w-sm bg-white rounded-lg">
       <Link href={`/posts/${slug}`}>
         <div>
-          <img className="rounded-lg" src={coverImage} alt="" />
+          <img
+            className="object-cover object-center w-full h-52 rounded-lg"
+            src={coverImage}
+            alt=""
+          />
           <div className="p-5 text-left">
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">
               {title}

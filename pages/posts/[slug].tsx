@@ -29,7 +29,7 @@ const Post = ({ post, preview }: Props) => {
           <PostTitle>Loading…</PostTitle>
         ) : (
           <>
-            <article className="">
+            <article>
               <Head>
                 <title>{post.title} | proken 216 website</title>
               </Head>
