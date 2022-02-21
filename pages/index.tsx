@@ -1,16 +1,15 @@
 import Container from "../components/container";
-import MoreStories from "../components/more-stories";
 import Layout from "../components/layout";
 import Hero from "../components/hero";
 import Section from "../components/section";
 import About from "../components/about";
 import Button from "../components/button";
+import PostPreview from "../components/post-preview";
 import Recruitment from "../components/recruitment";
 import { getAllPosts } from "../lib/api";
 import Head from "next/head";
 import { CONTENT_IN_ABOUT_SECTION } from "../lib/constants";
 import Post from "../types/post";
-import Button from "../components/button";
 
 type Props = {
   allPosts: Post[];
@@ -38,7 +37,7 @@ const Index = ({ allPosts }: Props) => {
         {/* Blog section */}
         <Section index="Blog" borderColor="teal">
           <Container>
-            {topPosts.length > 0 && <MoreStories posts={topPosts} />}
+            {topPosts.length > 0 && <PostPreview posts={topPosts} />}
             <Button
               href="/blog"
               message="もっとブログを見る"

@@ -13,7 +13,7 @@ const About = ({ content }: Props) => {
             <CustomImage />
           </div>
           <div className="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:pl-8 lg:text-left text-center">
-            <p className="mt-6 text-gray-500 text-base text-justify">
+            <p className="mt-6 text-gray-600 text-base text-justify">
               {content}
             </p>
           </div>

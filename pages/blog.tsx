@@ -1,5 +1,5 @@
 import Container from "../components/container";
-import MoreStories from "../components/more-stories";
+import PostPreview from "../components/post-preview";
 import Layout from "../components/layout";
 import Hero from "../components/hero";
 import Section from "../components/section";
@@ -25,7 +25,7 @@ const Index = ({ allPosts }: Props) => {
         {/* All blog section */}
         <Section index="Blog" borderColor="teal">
           <Container>
-            {topPosts.length > 0 && <MoreStories posts={topPosts} />}
+            {topPosts.length > 0 && <PostPreview posts={topPosts} />}
           </Container>
         </Section>
       </Layout>

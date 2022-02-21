@@ -1,28 +1,25 @@
-import DateFormatter from "./date-formatter";
-import Link from "next/link";
+import PostCard from "./post-card";
+import Post from "../types/post";
 
 type Props = {
-  title: string;
-  date: string;
-  slug: string;
-  coverImage: string;
+  posts: Post[];
 };
 
-const PostPreview = ({ title, date, slug, coverImage }: Props) => {
+const PostPreview = ({ posts }: Props) => {
   return (
-    <div className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md">
-      <Link href={`/posts/${slug}`}>
-        <div>
-          <img className="rounded-t-lg" src={coverImage} alt="" />
-          <div className="p-5">
-            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">
-              {title}
-            </h5>
-            <DateFormatter dateString={date} />
-          </div>
-        </div>
-      </Link>
-    </div>
+    <section>
+      <div className="grid md:grid-cols-3 md:gap-x-12 lg:gap-x-20 gap-y-20 md:gap-y-32 mb-16 place-content-center mt-10">
+        {posts.map((post) => (
+          <PostCard
+            key={post.slug}
+            title={post.title}
+            date={post.date}
+            slug={post.slug}
+            coverImage={post.coverImage}
+          />
+        ))}
+      </div>
+    </section>
   );
 };
 
