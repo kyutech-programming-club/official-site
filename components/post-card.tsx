@@ -9,7 +9,7 @@ type Props = {
 
 const PostCard = ({ title, date, slug, coverImage }: Props) => {
   return (
-    <div className="max-w-sm bg-white rounded-lg">
+    <div className="max-w-sm bg-white rounded-lg cursor-pointer">
       <Link href={`/posts/${slug}`}>
         <div>
           <img
