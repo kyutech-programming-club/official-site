@@ -1,7 +1,4 @@
-const path = require('path')
-
 module.exports = {
-  sassOptions: {
-    includePaths: [path.join(__dirname, 'styles')],
-  }
-}
+  basePath: process.env.GITHUB_ACTIONS ? "/official-site" : "",
+  trailingSlash: true,
+};
