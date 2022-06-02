@@ -8,8 +8,9 @@ import Layout from "../../components/layout";
 import PostTitle from "../../components/post-title";
 import { getPostBySlug, getAllPosts } from "../../lib/api";
 import Head from "next/head";
-import markdownToHtml from "../../lib/markdownToHtml";
 import PostType from "../../types/post";
+import "zenn-content-css";
+import markdownToHtml from "zenn-markdown-html";
 
 type Props = {
   post: PostType;
@@ -29,7 +30,7 @@ const Post = ({ post, preview }: Props) => {
           <PostTitle>Loading…</PostTitle>
         ) : (
           <>
-            <article>
+            <article className="mb-32 znc">
               <Head>
                 <title>{post.title} | proken 216 website</title>
               </Head>

@@ -1,4 +1,3 @@
-import DateFormatter from "./date-formatter";
 import CoverImage from "./cover-image";
 import Link from "next/link";
 
@@ -22,9 +21,7 @@ const HeroPost = ({ title, date, slug, coverImage }: Props) => {
               <a className="hover:underline">{title}</a>
             </Link>
           </h3>
-          <div className="mb-4 md:mb-0 text-lg">
-            <DateFormatter dateString={date} />
-          </div>
+          <div className="mb-4 md:mb-0 text-lg">{date}</div>
         </div>
       </div>
     </section>
